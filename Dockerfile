@@ -10,7 +10,8 @@ RUN echo -e "\n**********************\nNVIDIA Driver Version\n******************
 
 RUN apt-get update && apt-get install curl -y
 RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list
-RUN echo '-----BEGIN PGP PUBLIC KEY BLOCK-----
+RUN cat << EOF
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
 
 mQINBFdEmzkBEACzj8tMYUau9oFZWNDytcQWazEO6LrTTtdQ98d3JcnVyrpT16yg
@@ -63,7 +64,8 @@ WL5zxHbfX+wspgLDLIPYFKlhSEqnfbhrK/17GAd/YF9O7TFy6FzLprmJgp9TaGao
 iSI=
 =i9Ui
 -----END PGP PUBLIC KEY BLOCK-----
-' | apt-key add -
+EOF
+| apt-key add -
 #RUN curl https://bazel.build/bazel-release.pub.gpg | apt-key add -
 
 # Install some dependencies
