@@ -64,8 +64,8 @@ WL5zxHbfX+wspgLDLIPYFKlhSEqnfbhrK/17GAd/YF9O7TFy6FzLprmJgp9TaGao
 iSI=
 =i9Ui
 -----END PGP PUBLIC KEY BLOCK-----
-EOF
-| apt-key add -
+EOF >> bazel-release.pub.gpg
+RUN cat bazel-release.pub.gpg | apt-key add -
 #RUN curl https://bazel.build/bazel-release.pub.gpg | apt-key add -
 
 # Install some dependencies
