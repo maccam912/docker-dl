@@ -23,4 +23,4 @@ ldconfig
 echo "ld configged"
 
 echo "Starting your essential task"
-exec sudo jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root
+exec jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root
