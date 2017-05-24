@@ -15,12 +15,12 @@ echo "Found all of it"
 
 cp -ar -v /hostlib/modules /lib
 
-"Copy libs"
+echo "Copy libs"
 
 echo "/usr/lib64" > /etc/ld.so.conf.d/nvidia.conf
 ldconfig
 
-"ld configged"
+echo "ld configged"
 
 echo "Starting your essential task"
 exec sudo jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root
