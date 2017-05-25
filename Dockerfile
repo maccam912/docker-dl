@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.1.0-devel-gpu-py3
+FROM tensorflow/tensorflow:1.1.0-gpu
 
 RUN apt-get update
 RUN apt-get install git cmake automake autoconf -y
